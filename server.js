@@ -1,14 +1,18 @@
-import compression from "compression";
 import cors from "cors";
-import express from "express";
-import { engine } from "express-handlebars";
-import session from "express-session";
-import passport from "passport";
 import http from "http";
 import path from "path";
+import logger from "./utils/winston.js";
+import express from "express";
+import session from "express-session";
+import passport from "passport";
+import compression from "compression";
+import { engine } from "express-handlebars";
 import { Server } from "socket.io";
-import { fileURLToPath } from "url";
+import { config } from "./config/config.js";
+import { socket } from "./utils/socket.js";
 import { passportInit } from "./middleware/passportAuth.js";
+import { fileURLToPath } from "url";
+import { client, redisConnect, RedisStoreSession } from "./utils/redis.js";
 import {
   authRouter,
   chatRouter,
@@ -16,18 +20,13 @@ import {
   productRouter,
   userRouter
 } from "./routers/router.js";
-import { config } from "./config/config.js";
-import { client, redisConnect, RedisStoreSession } from "./utils/redis.js";
-import logger from "./utils/winston.js";
-import { Messages } from "./schemas/message.js"
-const app = express();
 
+const app = express();
 const server = http.createServer(app)
 const io = new Server(server);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 
 export class mainServer {
   constructor() {
@@ -85,19 +84,7 @@ export class mainServer {
   }
 
   socket() {
-    io.on('connection', async (socket) => {
-
-      socket.on('chat message', async (msg) => {
-        console.log('chat message =>', msg);
-        io.emit('chat message', msg);
-        await Messages.create(msg)
-      });
-      console.log('a user connected');
-      socket.on('disconnect', () => {
-        console.log('user disconnected');
-      });
-    });
-
+    socket.init(io);
   }
 
   templatingEngine() {
@@ -121,7 +108,6 @@ export class mainServer {
       logger.log("info", `✅ Success: Server ON at => http://localhost:${this.PORT}`)
     );
   }
-
 }
 
 

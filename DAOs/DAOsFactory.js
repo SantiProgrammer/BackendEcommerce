@@ -16,16 +16,19 @@ export let DAO;
 
 MongoConnectSingleton.getInstance();
 
-if (mode == 'dev') {
-    logger.log('info', `✅ Success: Data from DAOfactory Memory => Connected!`);
-    DAO = new DAOmessagesMemory && new DAOproductsMemory
-} else if (mode == 'file') {
-    logger.log('info', `✅ Success: Data from DAOfactory FileSystem => Connected!`);
-    DAO = new DAOmessagesFile && new DAOproductsFile;
-} else if (mode == 'prod') {
-    logger.log('info', `✅ Success: Data from DAOfactory Mongodb => Connected!`);
-    DAO = new DAOmessagesMongo /* && new DAOproductsMongo; */
-
-} else {
-    throw logger.log('warn', `⚠️ DAOfactory unsetted`);
-};
+switch (mode) {
+    case 'dev':
+        logger.log('info', `✅ Success: Data from DAOfactory Memory => Connected!`);
+        DAO = new DAOmessagesMemory && new DAOproductsMemory;
+        break;
+    case 'file':
+        logger.log('info', `✅ Success: Data from DAOfactory FileSystem => Connected!`);
+        DAO = new DAOmessagesFile && new DAOproductsFile;
+        break;
+    case 'prod':
+        logger.log('info', `✅ Success: Data from DAOfactory Mongodb => Connected!`);
+        DAO = new DAOmessagesMongo && new DAOproductsMongo;
+        break;
+    default:
+        throw logger.log('warn', `⚠️ DAOfactory unsetted`);
+}

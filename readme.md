@@ -9,9 +9,9 @@ _Esta es una aplicación simulando un eCommerce hecha en Node.js hecha en capas.
 ## Screenshot
 
 _Inicio eCommerce_
-![Imagen](/public/img/ScreenshotPokedex.webp)
-_Productos_
-![Imagen](/public/img/ScreenshotFavoritos.webp)
+![Imagen](/public/img/Screenshot%202023-04-06%20083531.png)
+_Log In_
+![Imagen](/public/img/Screenshot%202023-04-06%20083548.png)
 _Perfil de usuario_
 [Imagen](/public/img/ScreenshotFavoritos.webp)
 _Carrito_
@@ -43,18 +43,17 @@ Un explorador como: Chrome, Firefox o Safari.
 _Abrir la carpeta de la app en VSCode_
 
 ```
-cd eCommerce
+1.- cd eCommerce
 ```
 
 ```
-npm i
+2.- npm i
 ```
 
 ```
 a) npm run prod => Base de datos en Mongo Atlas
 b) npm run dev => Base de datos en Memoria
 c) npm run file => Base de datos en FileSystem
-
 ```
 
 ```
@@ -131,7 +130,11 @@ _Tecnologías utilizadas en este proyecto:_
 -   [Sass](https://sass-lang.com/documentation/) - Procesador de estilos.
 -   [JavaScript](https://www.w3schools.com/js/js_es6.asp) - Lenguaje de programación interpretado ECMAScript 6.
 -   [Nodemailer](https://nodemailer.com/usage/) - Applications to allow easy as cake email sending.
--   [Twilio](https://www.twilio.com/es-mx/) - Twilio APÏ SMS/Whatsapp.
+-   [axios](https://axios-http.com/docs/intro) - Testing.
+-   [mocha](https://axios-http.com/docs/intro) - Testing.
+-   [dotenv](https://www.npmjs.com/package/dotenv) - Variables de entorno.
+-   [handlebars](https://handlebarsjs.com/guide/) - Motor de plantillas.
+-   [socket.io](https://socket.io/get-started/chat) - Bidirectional and low-latency communication for every.platform.
 
 ## Versionado 📌
 
@@ -146,5 +149,4 @@ _Tecnologías utilizadas en este proyecto:_
 
 ```
 ⌨️ por [Santiago Morera](https://thisissanti.dev/) 😊
-
 ```

@@ -126,3 +126,11 @@
 {"level":"error","message":"❌ Error cant post message data : TypeError: DAO.postMessageData is not a function"}
 {"level":"error","message":"❌ Error cant post message data : TypeError: DAO.postMessageData is not a function"}
 {"level":"error","message":"❌ Error cant post message data : TypeError: DAO.postMessageData is not a function"}
+{"level":"error","message":"❌ Error cant get product controller ReferenceError: logger is not defined"}
+{"level":"error","message":"❌ Error cant get product controller ReferenceError: logger is not defined"}
+{"level":"error","message":"❌ Error cant get product controller ReferenceError: logger is not defined"}
+{"level":"error","message":"❌ Error cant get product controller ReferenceError: logger is not defined"}
+{"level":"error","message":"❌ Error cant get product controller ReferenceError: logger is not defined"}
+{"level":"warn","message":"⚠️ User Not Found with username thisissanti.dev@gmail.com"}
+{"level":"warn","message":"⚠️ User Not Found with username santi.iztli@gmail.com"}
+{"level":"error","message":"❌ cant send SMS to 5512308811"}
