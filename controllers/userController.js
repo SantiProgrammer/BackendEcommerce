@@ -4,3 +4,11 @@ export const getUserProfile = async (req, res) => {
     const admin = JSON.stringify(req.session.admin)
     res.render('pages/userProfile', { layout: 'logged', user, admin })
 };
+
+
+export const getSessionInfo = async (req, res) => {
+    const mySession = JSON.stringify(req.session, null, 4)
+    req.session.touch()
+    res.render('pages/session', { layout: 'logged', session: mySession })
+    //res.json(req.session)
+};

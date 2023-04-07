@@ -5,7 +5,7 @@ let products = [
         _id: 0,
         nombre: 'Array memory',
         precio: 1,
-        descripcion: 'from products array',
+        descripcion: 'data from memory',
         thumbnail: 'https://cdn-icons-png.flaticon.com/512/3898/3898186.png',
         stock: 1,
     },
@@ -18,7 +18,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 2,
+        _id: 2,
         nombre: 'Harina',
         precio: 15,
         descripcion: 'Harina integral',
@@ -26,7 +26,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 3,
+        _id: 3,
         nombre: 'Huevo',
         precio: 70,
         descripcion: 'Huevo fresco',
@@ -34,7 +34,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 4,
+        _id: 4,
         nombre: 'Cereal',
         precio: 80,
         descripcion: 'Cereal de frutas',
@@ -42,7 +42,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 5,
+        _id: 5,
         nombre: 'Avena',
         precio: 10,
         descripcion: 'Ojuelas de avena',
@@ -50,7 +50,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 6,
+        _id: 6,
         nombre: 'Cafe',
         precio: 150,
         descripcion: 'Cafe tostado medio',
@@ -58,7 +58,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 7,
+        _id: 7,
         nombre: 'Hielo',
         precio: 50,
         descripcion: 'Cubos de hielo',
@@ -66,7 +66,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 8,
+        _id: 8,
         nombre: 'Chocolate',
         precio: 30,
         descripcion: 'Chocolate con leche',
@@ -74,7 +74,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 9,
+        _id: 9,
         nombre: 'CupCake',
         precio: 290,
         descripcion: 'Cupcake red velvet',
@@ -82,7 +82,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 10,
+        _id: 10,
         nombre: 'Pasta',
         precio: 110,
         descripcion: 'Pasta de trigo',
@@ -90,7 +90,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 11,
+        _id: 11,
         nombre: 'Galleta',
         precio: 25,
         descripcion: 'Galletas con chispas',
@@ -98,7 +98,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 12,
+        _id: 12,
         nombre: 'Mouse',
         precio: 600,
         descripcion: 'Mouse bluetooth',
@@ -106,7 +106,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 13,
+        _id: 13,
         nombre: 'Manzana',
         precio: 55,
         descripcion: 'Manzana verde',
@@ -114,7 +114,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 14,
+        _id: 14,
         nombre: 'Libro',
         precio: 300,
         descripcion: 'Libro de programación',
@@ -122,7 +122,7 @@ let products = [
         stock: 10,
     },
     {
-        id: 15,
+        _id: 15,
         nombre: 'Aguacate',
         precio: 70,
         descripcion: 'Aguacate hass',

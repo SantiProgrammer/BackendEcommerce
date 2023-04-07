@@ -6,7 +6,6 @@ import { DAOproductsFile } from "./DAOproducts/DAOproductsFile.js";
 import { DAOproductsMemory } from "./DAOproducts/DAOproductsMemory.js";
 import { DAOproductsMongo } from "./DAOproducts/DAOproductsMongo.js";
 
-import { MongoConnectSingleton } from "../utils/MongoConnectSingleton.js";
 
 import logger from '../utils/winston.js';
 
@@ -14,7 +13,6 @@ let mode = process.argv[ 2 ];
 
 export let DAO;
 
-MongoConnectSingleton.getInstance();
 
 switch (mode) {
     case 'dev':

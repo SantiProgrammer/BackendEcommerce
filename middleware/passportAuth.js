@@ -4,6 +4,11 @@ import { Strategy as LocalStrategy } from 'passport-local'
 import { User } from '../schemas/user.js'
 import logger from '../utils/winston.js'
 
+import { MongoConnectSingleton } from "../utils/MongoConnectSingleton.js";
+
+MongoConnectSingleton.getInstance();
+
+
 const isValidPassword = (user, password) => {
     return bcrypt.compareSync(password, user.password)
 }
