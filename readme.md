@@ -47,13 +47,13 @@ _Abrir la carpeta de la app en VSCode_
 ```
 
 ```
-2.- npm i
+2.- npm i && npm start
 ```
 
 ```
-a) npm run prod => Base de datos en Mongo Atlas
-b) npm run dev => Base de datos en Memoria
-c) npm run file => Base de datos en FileSystem
+a) npm start => Base de datos en Mongo Atlas (Producción)
+b) npm run dev => Base de datos en Memoria (Desarrollo)
+c) npm run file => Base de datos en FileSystem (Desarrollo)
 ```
 
 ```

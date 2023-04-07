@@ -1,0 +1,16 @@
+# Deploy at fly.io
+# eCommerce-BackEnd-43495:
+
+Created app 'ecommerce-backend-43495' in organization 'personal'
+Admin URL: https://fly.io/apps/ecommerce-backend-43495
+Hostname: ecommerce-backend-43495.fly.dev
+
+# To deploy:
+
+fly launch
+fly launch --now
+flyctl launch
+fly launch --image flyio/hellofly:latest
+
+
+
