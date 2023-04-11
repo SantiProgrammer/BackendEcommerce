@@ -6,6 +6,8 @@ import { DAOproductsFile } from "./DAOproducts/DAOproductsFile.js";
 import { DAOproductsMemory } from "./DAOproducts/DAOproductsMemory.js";
 import { DAOproductsMongo } from "./DAOproducts/DAOproductsMongo.js";
 
+import { DAOordersMongo } from "./DAOorders/DAOordersMongo.js";
+
 
 import logger from '../utils/winston.js';
 
@@ -25,7 +27,7 @@ switch (mode) {
         break;
     case 'prod':
         logger.log('info', `✅ Success: Data from DAOfactory Mongodb => Connected!`);
-        DAO = new DAOmessagesMongo && new DAOproductsMongo;
+        DAO = new DAOmessagesMongo && new DAOproductsMongo
         break;
     default:
         throw logger.log('warn', `⚠️ DAOfactory unsetted`);

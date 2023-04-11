@@ -1,4 +1,4 @@
-import { sendEmail } from '../utils/nodeMailer.js'
+import { sendAdminEmail } from "../utils/nodeMailer.js";
 import { sendSMS } from '../utils/twilio.js'
 import logger from '../utils/winston.js'
 
@@ -32,8 +32,7 @@ export const postLoginController = async (req, res) => {
 export const postSignupController = async (req, res) => {
     const { username, password } = req.user
     const user = { username, password }
-    sendEmail(user.username, ' ')
-    sendEmail('santi.iztli@gmail.com', user)
+    sendAdminEmail(user.username)
     sendSMS('User Registration succesful ✅', req.user.telefono)
     res.render('pages/logInSucess', { layout: 'logged', user })
 }

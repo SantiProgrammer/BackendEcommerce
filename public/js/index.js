@@ -147,10 +147,24 @@ pagarTotal.addEventListener('click', () => {
     /* Aqui irira una confirmacion de pago (otro sweet alert) */
   })
 
-  /*  function sentCarrito() {
-   socket.emit("carritoUser", carrito);
- }
- sentCarrito() */
+  const mandarDatosAlBackEnd = (data) => {
+
+    const cart = {
+      cart: data
+    }
+
+    fetch('/api/user/order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(cart)
+
+    });
+
+
+  }
+  mandarDatosAlBackEnd(carrito)
   carrito.length = 0
   actualizarCarrito()
 })
@@ -244,5 +258,6 @@ function filterList() {
     }
   })
 }
+
 
 /* Fin */

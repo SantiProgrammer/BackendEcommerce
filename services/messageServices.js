@@ -9,9 +9,9 @@ export const getMessagesService = async () => {
     }
 }
 
-export const postMessageService = async (data) => {
+export const postMessageService = async (data, user) => {
     try {
-        return await DAO.postMessageData(data)
+        return await DAO.postMessageData(data, user)
     } catch (e) {
         logger.log('error', `❌ Error cant post message data : ${e}`)
     }

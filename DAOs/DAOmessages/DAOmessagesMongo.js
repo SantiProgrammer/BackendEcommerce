@@ -17,4 +17,19 @@ export class DAOmessagesMongo {
             logger.log('error', `❌ Error cant post Message data: ${e}`)
         }
     }
+    deleteMessageData = async (data) => {
+        try {
+            await Messages.deleteOne(data)
+        } catch (e) {
+            logger.log('error', `❌ Error cant post Message data: ${e}`)
+        }
+    }
+    replaceMessageData = async (_id, data) => {
+        try {
+            await Messages.replaceOne({ _id: _id }, data)
+        } catch (e) {
+            logger.log('error', `❌ Error cant post Message data: ${e}`)
+        }
+    }
+
 }

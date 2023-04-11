@@ -1,4 +1,5 @@
 import { Product } from '../../schemas/product.js'
+import { Order } from '../../schemas/orders.js';
 import logger from '../../utils/winston.js'
 
 export class DAOproductsMongo {
@@ -44,4 +45,19 @@ export class DAOproductsMongo {
             logger.log('error', `❌ Error cant delete product data: ${e}`)
         }
     }
+
+    postOrderData = async (data) => {
+
+        const newOrder = {
+            cart: data
+        }
+        try {
+            console.log('newOrder'); /* Order.create(newOrder) */
+        } catch (e) {
+            logger.log('error', `❌ Error cant post order data: ${e}`)
+        }
+    }
+
+
+
 }

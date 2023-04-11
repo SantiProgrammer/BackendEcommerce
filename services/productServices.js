@@ -1,4 +1,5 @@
 import { DAO } from "../DAOs/DAOsFactory.js";
+import logger from '../utils/winston.js'
 
 export const getProductService = async () => {
     try {
@@ -16,7 +17,7 @@ export const postProductService = async (data) => {
     }
 };
 
-export const putProductService = async(data) => {
+export const putProductService = async (data) => {
     try {
         return await DAO.putProductData(data)
     } catch (e) {
@@ -24,7 +25,7 @@ export const putProductService = async(data) => {
     }
 }
 
-export const deleteProductService = async(id) => {
+export const deleteProductService = async (id) => {
     try {
         return await DAO.deleteProductData(id)
     } catch (e) {

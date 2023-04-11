@@ -19,4 +19,15 @@ export class DAOmessagesMemory {
             logger.log('error', `❌ Error cant post messages data: ${e}`)
         }
     }
+
+    deleteMessageData = async (_id) => {
+        try {
+            logger.log('info', `✅ Success delete messages data: ${e}`)
+            return messages.delete(_id)
+        } catch (e) {
+            logger.log('error', `❌ Error cant delete messages data: ${e}`)
+        }
+    }
+
+
 }
