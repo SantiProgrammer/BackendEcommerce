@@ -10,7 +10,6 @@ export const socket = {
         io.on('connection', async (socket) => {
 
             socket.on('chat message', async (msg) => {
-                console.log('chat message =>', msg);
                 io.emit('chat message', msg);
                 await Messages.create({ msg })
             });

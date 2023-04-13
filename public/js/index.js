@@ -145,35 +145,34 @@ pagarTotal.addEventListener('click', () => {
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
     /* Aqui irira una confirmacion de pago (otro sweet alert) */
-  })
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const mandarDatosAlBackEnd = (order) => {
 
-  const mandarDatosAlBackEnd = (data) => {
+        fetch('/api/product/order', {
+          method: 'POST',
+          headers: {
+            'name': 'cart',
+            'Content-Type': 'application/json'
 
-    const cart = {
-      cart: data
+          },
+          body: JSON.stringify(order)
+
+        });
+      }
+
+      mandarDatosAlBackEnd(carrito)
+      carrito.length = 0
+      actualizarCarrito()
     }
+  });
 
-    fetch('/api/user/order', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(cart)
-
-    });
-
-
-  }
-  mandarDatosAlBackEnd(carrito)
-  carrito.length = 0
-  actualizarCarrito()
 })
 
 /*  Renderizar productos en carrito */
 
 const carritoWrapper = document.getElementById('carrito-wrapper')
 const actualizarCarrito = () => {
-  console.log('Carrito:', carrito)
   carritoWrapper.innerHTML = ''
   if (carrito.length === 0) {
     let aviso = document.createElement('div')
@@ -221,8 +220,6 @@ const actualizarCarrito = () => {
     (acumulador, elemento) => acumulador + elemento.cantidad,
     0
   )
-
-  console.log('carrito', carrito)
 
   const totalPrecioCarrito = document.getElementById('totalPrecioCarrito')
 

@@ -5,6 +5,9 @@ import {
     deleteProductService,
 } from '../services/productServices.js'
 
+import { postOrderService } from "../services/productServices.js";
+import { newOrderEmail } from "../utils/nodeMailer.js";
+
 import logger from '../utils/winston.js'
 
 export const getProductController = async (req, res) => {
@@ -52,3 +55,15 @@ export const deleteProductController = async (req, res) => {
         /* res.json() */
     } catch (error) { }
 };
+
+export const postOrder = async (req, res) => {
+    const { username } = req.user
+    const order = req.body
+    const orderString = JSON.stringify(order)
+    postOrderService(username, order)
+    newOrderEmail(username, orderString)
+    res.json("Orden creada!")
+};
+
+
+

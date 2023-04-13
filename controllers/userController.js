@@ -1,5 +1,4 @@
-import { postOrderService } from "../services/userServices.js";
-import { newOrderEmail } from "../utils/nodeMailer.js";
+
 
 
 export const getUserProfile = async (req, res) => {
@@ -16,17 +15,3 @@ export const getSessionInfo = async (req, res) => {
     res.render('pages/session', { layout: 'logged', session: mySession })
     //res.json(req.session)
 };
-export const postOrder = async (req, res) => {
-    const { username } = req.user
-    const cart = req.body
-    const cartString = JSON.stringify(cart)
-
-    console.log('cart', cart);
-    postOrderService(cart)
-
-    newOrderEmail(username, cartString)
-
-    res.json("Orden creada!")
-};
-
-

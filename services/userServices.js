@@ -8,10 +8,4 @@ export const getProductService = async () => {
     }
 };
 
-export const postOrderService = async (data) => {
-    try {
-        return await DAO.postOrderData(data)
-    } catch (e) {
-        logger.log('error', `❌ Error cant post product: ${e}`);
-    }
-};
+

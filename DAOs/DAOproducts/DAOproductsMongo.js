@@ -46,13 +46,10 @@ export class DAOproductsMongo {
         }
     }
 
-    postOrderData = async (data) => {
-
-        const newOrder = {
-            cart: data
-        }
+    postOrderData = async (username, data) => {
         try {
-            console.log('newOrder'); /* Order.create(newOrder) */
+            Order.create(username, data)
+            logger.log('info', `✅ new order saved at db`)
         } catch (e) {
             logger.log('error', `❌ Error cant post order data: ${e}`)
         }

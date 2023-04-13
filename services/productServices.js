@@ -32,3 +32,11 @@ export const deleteProductService = async (id) => {
         logger.log('error', `❌ Error cant delete product whit id:_${id}: ${e}`);
     }
 }
+
+export const postOrderService = async (username, data) => {
+    try {
+        return await DAO.postOrderData({ username: username, order: data })
+    } catch (e) {
+        logger.log('error', `❌ Error cant post product: ${e}`);
+    }
+};
