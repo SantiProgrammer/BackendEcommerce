@@ -9,10 +9,14 @@
     border-radius: 10px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 20px;
+    padding: 30px;
     margin: 20px;
     z-index: -1;
     animation: fadeInUp .5s;
+
+    h4 {
+        font-size: 20px;
+    }
 
     .column {
         display: flex;
@@ -27,6 +31,16 @@
             align-items: flex-start;
             text-align: left;
             flex-direction: column;
+
+            p {
+                font-family: monospace;
+
+
+                strong {
+                    font-weight: bold;
+                    margin-right: 5px;
+                }
+            }
         }
 
     }
@@ -36,6 +50,7 @@
 
 .user-avatar {
     width: 150px;
+    border-radius: 15px;
 }
 
 ;

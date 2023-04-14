@@ -312,10 +312,13 @@ a {
   border-radius: 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 20px;
+  padding: 30px;
   margin: 20px;
   z-index: -1;
   animation: fadeInUp 0.5s;
+}
+.user-card h4 {
+  font-size: 20px;
 }
 .user-card .column {
   display: flex;
@@ -331,9 +334,17 @@ a {
   text-align: left;
   flex-direction: column;
 }
+.user-card .column .user-card-body p {
+  font-family: monospace;
+}
+.user-card .column .user-card-body p strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
 
 .user-avatar {
   width: 150px;
+  border-radius: 15px;
 }
 
 /* products */
