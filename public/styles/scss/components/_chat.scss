@@ -84,12 +84,18 @@
 
 
 
+
+
 }
 
 .offcanvas.offcanvas-bottom {
     right: 0;
     left: unset;
-    width: 450px !important;
+    width: 91%;
+
+    @media screen and (min-width: 415px) {
+        width: 400px;
+    }
 }
 
 /* .offcanvas.offcanvas-end {
