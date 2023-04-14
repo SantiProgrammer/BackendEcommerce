@@ -564,6 +564,7 @@ a:visited {
 .my-canvas {
   background-color: rgba(196, 196, 196, 0.2823529412);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: rgba(229, 229, 229, 0.9);
   border-radius: 15px;
   margin-top: 60px;
@@ -864,6 +865,7 @@ button {
 .chat-canvas {
   background-color: rgba(196, 196, 196, 0.2823529412);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: rgba(229, 229, 229, 0.9);
   border-radius: 15px;
   margin: 15px;

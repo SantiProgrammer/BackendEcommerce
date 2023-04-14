@@ -75,6 +75,7 @@
 .chat-canvas {
     background-color: #c4c4c448;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: rgba(229, 229, 229, 0.9);
     border-radius: 15px;
     margin: 15px;
