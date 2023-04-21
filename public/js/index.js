@@ -41,13 +41,25 @@ const printProductos = async () => {
                <p class="card-text">$ ${producto.precio}</p>
                 <div class="button-wrapper">
                 <button class="btn btn-primary" id="p${producto._id}">Agregar al Carrito</button>
+                <div class="deleteEdit" >
                 <button id="e{producto.id}">
                     <img
         src='https://cdn-icons-png.flaticon.com/512/1345/1345925.png'
         class='delete-image'
-        alt='success!'
+        alt='delete'
+           title='Delete (Coming soon!)'
     />
                 </button>
+                                <button id="e{producto.id}">
+                    <img
+        src='https://cdn-icons-png.flaticon.com/512/2280/2280557.png'
+        class='delete-image'
+        alt='edit'
+        title='Edit (Coming soon!)'
+    />
+                </button>
+
+                </div>
               </div>
          </figure> `
     productosWrapper.appendChild(card)
@@ -139,7 +151,7 @@ const pagarTotal = document.getElementById('pagarTotal')
 pagarTotal.addEventListener('click', () => {
   Swal.fire({
     title: `Total: $${totalCarrito} `,
-    text: 'Se enviara un correo con los productos de tu pedido',
+    text: ' 📨 Se enviara un correo con los detalles de tu pedido',
     showClass: {
       popup: 'animate__animated animate__fadeInTopRight',
     },
@@ -155,6 +167,30 @@ pagarTotal.addEventListener('click', () => {
     /* Aqui irira una confirmacion de pago (otro sweet alert) */
   }).then((result) => {
     if (result.isConfirmed) {
+      Swal.fire({
+        title: 'Order created successfully!',
+        html:
+          'Auto close in <b>bold text</b> ',
+        icon: 'success',
+        timer: 5000,
+        footer: '✅ Email sent!',
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading()
+          const b = Swal.getHtmlContainer().querySelector('b')
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log('I was closed by the timer')
+        }
+      })
       const mandarDatosAlBackEnd = (order) => {
 
         fetch('/api/product/order', {
@@ -173,11 +209,7 @@ pagarTotal.addEventListener('click', () => {
       carrito.length = 0
       actualizarCarrito()
     }
-  }).then((result) => {
-    if (result.isConfirmed) {
-
-    }
-  });;
+  })
 
 })
 

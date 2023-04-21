@@ -522,6 +522,15 @@ p {
   padding: 10px;
   border-radius: 10px;
 }
+.productos__card div .card .cart-image {
+  opacity: 1;
+  width: 35px;
+  padding: 0;
+  transition: 0.2s ease all;
+}
+.productos__card div .card .cart-image:hover {
+  transform: scale(1.2);
+}
 .productos__card div .card img {
   width: 70px;
   padding-bottom: 1em;
@@ -559,12 +568,20 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 .button-wrapper button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.deleteEdit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 15px;
 }
 
 body.dark .card-title {

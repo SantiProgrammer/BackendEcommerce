@@ -31,6 +31,7 @@ export const newOrderEmail = async (username, order) => {
         <p>Ordering user: ${username}</p>
         <p>Your order: ${order}</p>
         <p>This is a fake email order to test eCommerce by thisIsSanti.dev</p>
+        <a href="https://ecommerce-backend-43495.fly.dev/api/user/profile" > Go to your eCommerce profile!</a>
         `,
     }
 

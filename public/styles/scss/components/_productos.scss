@@ -123,6 +123,17 @@ p {
             padding: 10px;
             border-radius: 10px;
 
+            .cart-image {
+                opacity: 1;
+                width: 35px;
+                padding: 0;
+                transition: .2s ease all;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
             img {
                 width: 70px;
                 padding-bottom: 1em;
@@ -176,13 +187,22 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 
     button {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+}
+
+.deleteEdit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 15px;
+
 }
 
 
@@ -228,6 +248,8 @@ p {
 
     }
 }
+
+
 
 
 /* ------------------------------ fin tienda ----------------------------- */

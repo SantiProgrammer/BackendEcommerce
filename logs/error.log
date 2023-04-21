@@ -167,3 +167,5 @@
 {"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
 {"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
 {"level":"error","message":"❌ Error cant post message controller: TypeError: Cannot read properties of undefined (reading 'nombre')"}
+{"level":"error","message":"❌ Error: Cant connect MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/"}
+{"level":"error","message":"❌ Error: Cant connect MongooseServerSelectionError: connect ETIMEDOUT 18.228.74.126:27017"}
