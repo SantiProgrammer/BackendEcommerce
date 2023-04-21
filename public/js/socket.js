@@ -5,6 +5,7 @@ let form = document.getElementById('form')
 let input = document.getElementById('input')
 let windowChat = document.getElementById('windowChat')
 
+
 form.addEventListener('submit', function (e) {
     e.preventDefault()
     if (input.value) {
@@ -19,3 +20,6 @@ socket.on('chat message', function (msg) {
     messages.appendChild(item)
     windowChat.scrollTo(0, document.body.scrollHeight)
 })
+
+
+

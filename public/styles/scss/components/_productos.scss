@@ -48,6 +48,8 @@
 
 }
 
+
+
 .product-img {
     width: 190px;
     max-height: 200px;
@@ -119,6 +121,7 @@ p {
             color: black;
             font-weight: bolder;
             padding: 10px;
+            border-radius: 10px;
 
             img {
                 width: 70px;
@@ -153,10 +156,10 @@ p {
 
 %boton {
     background-color: $botonColor;
-    border-radius: 5%;
     color: white;
     border: none;
     transition: all .2s;
+    border-radius: 10px;
 
     &:hover {
         color: white;
@@ -166,6 +169,19 @@ p {
     a {
         text-decoration: none;
         color: white;
+    }
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -199,6 +215,18 @@ p {
     background-color: $darkgrey !important;
     color: rgb(187, 187, 187) !important;
 
+}
+
+.delete-image {
+    width: 20px !important;
+    padding-bottom: 0em !important;
+    opacity: .5;
+    transition: all ease .2s;
+
+    &:hover {
+        opacity: 1;
+
+    }
 }
 
 

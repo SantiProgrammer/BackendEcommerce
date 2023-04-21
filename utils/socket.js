@@ -1,7 +1,5 @@
 /* Socket */
-import { loggers } from "winston";
-import { DAO } from "../DAOs/DAOsFactory.js";
-import { Messages } from "../schemas/message.js";
+import axios from 'axios';
 
 export const socket = {
 
@@ -11,7 +9,13 @@ export const socket = {
 
             socket.on('chat message', async (msg) => {
                 io.emit('chat message', msg);
-                await Messages.create({ msg })
+                axios.post('http://localhost:8080/api/chat', msg)
+                    .then((respuesta) => {
+                        console.log('Mensaje enviado:', respuesta.data);
+                    })
+                    .catch((error) => {
+                        console.log('Error al enviar el mensaje:', error);
+                    });
             });
 
 

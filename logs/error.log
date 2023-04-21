@@ -101,3 +101,69 @@
 {"level":"error","message":"❌ Error cant post order data: ValidationError: cart: Cast to string failed for value \"[\n  {\n    id: '643032c5b66032c9fe8eaac8',\n    nombre: 'Cafe',\n    precio: 150,\n    descripcion: 'Cafe tostado medio',\n    thumbnail: 'https://cdn-icons-png.flaticon.com/512/5847/5847393.png',\n    stock: 10,\n    cantidad: 1,\n    totalPrecio: 150\n  }\n]\" (type Array) at path \"cart\""}
 {"level":"error","message":"❌ Error cant post order data: ValidationError: cart: Cast to string failed for value \"[\n  {\n    id: '643032c5b66032c9fe8eaace',\n    nombre: 'Mouse',\n    precio: 600,\n    descripcion: 'Mouse bluetooth',\n    thumbnail: 'https://cdn-icons-png.flaticon.com/512/8033/8033957.png',\n    stock: 10,\n    cantidad: 1,\n    totalPrecio: 600\n  }\n]\" (type Array) at path \"cart\""}
 {"level":"error","message":"❌ Error cant post order data: ValidationError: cart: Cast to string failed for value \"{\n  cart: [\n    {\n      id: '643032c5b66032c9fe8eaac3',\n      nombre: 'Leche',\n      precio: 20,\n      descripcion: 'Leche fria como hielo',\n      thumbnail: 'https://cdn-icons-png.flaticon.com/512/372/372973.png',\n      stock: 10,\n      cantidad: 1,\n      totalPrecio: 20\n    }\n  ]\n}\" (type Object) at path \"cart\""}
+{"level":"error","message":"❌ Error cant post Message data: ObjectParameterError: Parameter \"obj\" to Document() must be an object, got Hola Mensaje de prueba"}
+{"level":"error","message":"❌ Error cant post Message data: ObjectParameterError: Parameter \"obj\" to Document() must be an object, got Prueba"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant post Message data: ObjectParameterError: Parameter \"obj\" to Document() must be an object, got Prueba"}
+{"level":"error","message":"❌ Error cant post Message data: ObjectParameterError: Parameter \"obj\" to Document() must be an object, got Hola"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant post messages data: ReferenceError: e is not defined"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant post message controller: TypeError: Date.now is not a constructor"}
+{"level":"error","message":"❌ Error cant post message controller: TypeError: Date.now is not a constructor"}
+{"level":"error","message":"❌ Error cant post message controller: TypeError: Date.now is not a constructor"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant post message controller: ReferenceError: moment is not defined"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant post message controller: TypeError: Cannot read properties of undefined (reading 'status')"}
+{"level":"error","message":"❌ Error cant post message controller: TypeError: Cannot read properties of undefined (reading 'status')"}
+{"level":"error","message":"❌ Error cant post message controller: TypeError: Cannot read properties of undefined (reading 'nombre')"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant get product service: TypeError: DAO.getProductData is not a function"}
+{"level":"error","message":"❌ Error cant post message controller: TypeError: Cannot read properties of undefined (reading 'nombre')"}

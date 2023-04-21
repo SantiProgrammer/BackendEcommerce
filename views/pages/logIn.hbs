@@ -1,7 +1,13 @@
 <div class='login-box'>
-    <div class='navbar-column'>
-        <a href='/' title='Go Home'>🏠 Home</a>
-    </div>
+
+    <a href='/' title='Go Home'>
+        <img
+            src='https://cdn-icons-png.flaticon.com/512/7423/7423017.png'
+            alt='arrow'
+            class='home-image'
+        />
+    </a>
+
     <form method='post' action='/api/auth/login'>
         <h2>Login</h2>
         <img
@@ -27,9 +33,9 @@
         </div>
         <button class='log-button m-2' type='submit'>Log In</button>
     </form>
-</div>
-<div class='navbar-column'>
-    <a href='/api/auth/signup' title='Signup '>Sign Up</a>
+    <div class='navbar-column'>
+        <a href='/api/auth/signup' title='Signup '>Sign Up</a>
+    </div>
 </div>
 
 <script>

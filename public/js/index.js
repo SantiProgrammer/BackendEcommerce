@@ -39,8 +39,16 @@ const printProductos = async () => {
                <p class="card-title">${producto.nombre} </p>
                <p class="card-description">(${producto.descripcion})</p>
                <p class="card-text">$ ${producto.precio}</p>
-
-               <button class="btn btn-primary" id="p${producto._id}">Agregar al Carrito</button>
+                <div class="button-wrapper">
+                <button class="btn btn-primary" id="p${producto._id}">Agregar al Carrito</button>
+                <button id="e{producto.id}">
+                    <img
+        src='https://cdn-icons-png.flaticon.com/512/1345/1345925.png'
+        class='delete-image'
+        alt='success!'
+    />
+                </button>
+              </div>
          </figure> `
     productosWrapper.appendChild(card)
     const boton = document.getElementById(`p${producto._id}`)
@@ -165,7 +173,11 @@ pagarTotal.addEventListener('click', () => {
       carrito.length = 0
       actualizarCarrito()
     }
-  });
+  }).then((result) => {
+    if (result.isConfirmed) {
+
+    }
+  });;
 
 })
 
@@ -183,7 +195,7 @@ const actualizarCarrito = () => {
       let card = document.createElement('div')
       card.innerHTML = `
     <figure class="card mb-4 ">
-      <div class="row g-0">
+      <div class="row g-0 d-flex justify-content-center">
           <div class="col-md-3 img-carrito">
               <img src="${producto.thumbnail}" class="img-fluid rounded-start" alt="${producto.nombre}">
           </div>

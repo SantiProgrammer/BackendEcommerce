@@ -10,6 +10,7 @@ export const getMessageData = async (req, res) => {
 }
 
 export const postMessageController = async (req, res) => {
+    console.log('la data paso por postMessageController')
 
     try {
         const user = req.user

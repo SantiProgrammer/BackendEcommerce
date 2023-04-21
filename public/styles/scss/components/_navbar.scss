@@ -60,6 +60,18 @@ nav {
     }
 }
 
+.home-image {
+    width: 35px;
+    transition: all ease .2s;
+
+
+    &:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 2px rgb(111, 250, 240));
+
+    }
+}
+
 
 .cart {
     width: 30px;

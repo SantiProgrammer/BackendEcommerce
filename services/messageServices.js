@@ -1,5 +1,8 @@
 import { DAO } from '../DAOs/DAOsFactory.js'
 import logger from '../utils/winston.js'
+import moment from 'moment/moment.js'
+
+
 
 export const getMessagesService = async () => {
     try {
@@ -10,9 +13,23 @@ export const getMessagesService = async () => {
 }
 
 export const postMessageService = async (data, user) => {
+
+    const timestamp = moment().format('LLL');
+
+    const newMessage = {
+        author: {
+            nombre: user.nombre,
+            edad: user.edad,
+            alias: user.username,
+            avatar: user.url,
+        },
+        timestamp: timestamp,
+        text: data
+    }
     try {
-        return await DAO.postMessageData(data, user)
+        console.log('message:', newMessage);
+        /* return await DAO.postMessageData(data, user) */
     } catch (e) {
-        logger.log('error', `❌ Error cant post message data : ${e}`)
+        logger.log('error', `❌ Error cant post message service : ${e}`)
     }
 }
