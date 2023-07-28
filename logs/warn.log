@@ -224,3 +224,4 @@
 {"level":"error","message":"❌ Error: Cant connect MongooseServerSelectionError: connect ETIMEDOUT 18.228.74.126:27017"}
 {"level":"warn","message":"⚠️ No session to logout:"}
 {"level":"warn","message":"⚠️ No session to logout:"}
+{"level":"warn","message":"⚠️ Invalid Password"}
