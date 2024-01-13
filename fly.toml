@@ -10,7 +10,7 @@ primary_region = "qro"
 processes = []
 
 [build]
-  builder = "heroku/buildpacks:22"
+  builder = "heroku/builder:22"
 
 [env]
   PORT = "8080"
