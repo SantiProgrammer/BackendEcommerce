@@ -51,25 +51,25 @@ export class mainServer {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(
-      session({
-        store: new RedisStoreSession({
-          host: 'redis-14483.c84.us-east-1-2.ec2.cloud.redislabs.com',
-          port: 14483,
-          client,
-          ttl: 300,
-        }),
-        secret: "keyboard cat",
-        cookie: {
-          httpOnly: false,
-          secure: false,
-          maxAge: 86400000, // 1 dia
-        },
-        admin: true,
-        rolling: true,
-        resave: true,
-        saveUninitialized: false,
-      })
-    );
+        session({
+            store: new RedisStoreSession({
+                host: 'redis-10870.c322.us-east-1-2.ec2.cloud.redislabs.com',
+                port: 10870,
+                client,
+                ttl: 300,
+            }),
+            secret: 'keyboard cat',
+            cookie: {
+                httpOnly: false,
+                secure: false,
+                maxAge: 86400000, // 1 dia
+            },
+            admin: true,
+            rolling: true,
+            resave: true,
+            saveUninitialized: false,
+        })
+    )
 
     this.app.use(passport.initialize());
     this.app.use(passport.session());
